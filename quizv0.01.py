@@ -5,7 +5,7 @@ with open('textlist.txt', 'r', encoding="utf-8") as f:
     f.close()
 print("\x1b[1;31;40m"+"Welcome to the AWS Cloud Practitioner 2021 Complete Quiz."+"\x1b[0m")
 progress = 1
-print("Input Progress")
+print("\x1b[1;32;40m"+"Input Progress"+"\x1b[0m")
 progress = input()
 started = "no"
 for i in z:
@@ -17,13 +17,24 @@ for i in z:
     if "yes" in started:
         if "Question #" in i:
             input("\x1b[2;30;44m"+"Press Enter to continue.."+"\x1b[0m")
+            print("")
             print("\n"+"\x1b[6;30;42m"+i+"\x1b[0m")
         elif "Correct Answer" in i:
+            print("")
             ans = input("\x1b[1;32;40m"+"Input your Answer..   "+"\x1b[0m")
-            print("Your Answer: "+ans)
-            print("\x1b[1;34;40m"+i+"\x1b[0m")
+            print("")
+            print("\x1b[1;36;40m"+"Your Answer: "+ans+"\x1b[0m")
+            print("")
+            print("\x1b[1;33;40m"+i+"\x1b[0m")
         elif "Reference" in i:
             input("\x1b[2;30;44m"+"Press Enter to continue.."+"\x1b[0m")
-            print(i)
+            print("")
+            print("\x1b[2;30;43m"+i+"\x1b[0m")
+        elif "Explanation" in i:
+            print("\x1b[1;32;40m"+i+"\x1b[0m")
+            print("")
+        elif "https://" in i:
+            print("\x1b[2;30;43m"+i+"\x1b[0m")
+            print("")
         else:
-            print(i)
+            print("\x1b[1;31;40m"+i+"\x1b[0m")
