@@ -19,7 +19,8 @@ for i in z:
             input("\x1b[2;30;44m"+"Press Enter to continue.."+"\x1b[0m")
             print("\n"+"\x1b[6;30;42m"+i+"\x1b[0m")
         elif "Correct Answer" in i:
-            input("\x1b[1;32;40m"+"Input your Answer..   "+"\x1b[0m")
+            ans = input("\x1b[1;32;40m"+"Input your Answer..   "+"\x1b[0m")
+            print("Your Answer: "+ans)
             print("\x1b[1;34;40m"+i+"\x1b[0m")
         elif "Reference" in i:
             input("\x1b[2;30;44m"+"Press Enter to continue.."+"\x1b[0m")
