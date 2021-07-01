@@ -5,5 +5,12 @@ with open('textlist.txt', 'r', encoding="utf-8") as f:
     f.close()
     
 for i in z:
-    print(i)
-    input(" ")
+    if "Question" in i:
+        print("\n"+i)
+    elif "Correct Answer" in i:
+        input(" ")
+        print(i)
+    elif "Reference" in i:
+        input("Press Enter to continue..")
+    else:
+        print(i)
