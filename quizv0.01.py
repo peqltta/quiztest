@@ -9,7 +9,7 @@ for i in z:
         input("Press Enter to continue..")
         print("\n"+i)
     elif "Correct Answer" in i:
-        input(" ")
+        input("Input your Answer..")
         print(i)
     elif "Reference" in i:
         input("Press Enter to continue..")
