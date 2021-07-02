@@ -32,7 +32,7 @@ for i in z:
             started = "yes"
     if "yes" in started:
         if "Question #" in i:
-            input(+"Press Enter to continue..")
+            input("Press Enter to continue..")
             print("")
             print("\n"+i)
         elif "Correct Answer" in i:
@@ -44,7 +44,7 @@ for i in z:
             print("")
             print(i)
         elif "Reference" in i:
-            input(+"Press Enter to continue..")
+            input("Press Enter to continue..")
             print("")
             print(i)
         elif "Explanation" in i:
