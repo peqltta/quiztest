@@ -9,11 +9,12 @@ with open('textlist.txt', 'r', encoding="utf-8") as f:
     y = x.replace('\n',': ')
     z = y.split(': ')
     f.close()
+Question = ''
 for i in z:
     if "Question #" in i:
         Ques = i
         qqq = 1
-    elif "Correct Answer" in i:
+    elif "Correct A" in i:
         qqq = 0
         ccc = 1
     elif "Reference" in i:
@@ -25,7 +26,7 @@ for i in z:
     elif "https://" in i:
         QADict[Ques+"Ref"] = i
     else:
-        if qqq==1:
+        if qqq==1:   
             if "A. " in i:
                 QADict[Ques+"A"] = i
             elif "B. " in i:
@@ -37,11 +38,12 @@ for i in z:
             elif "E. " in i:
                 QADict[Ques+"E"] = i
             else:
-                QADict[Ques] = i
+                Question = Question + ' ' + i
+                QADict[Ques] = Question
         elif ccc==1:
             QADict[Ques+"Answer"] = i
-        elif rrr==1:
-            QADict[Ques+"Ref"] = i
+            Question = ''
+            ccc=0
 for i in range(1,65):
     numran = random.randint(1,671)
     print(QADict["Question #"+str(numran)])
@@ -67,5 +69,8 @@ for i in range(1,65):
             print("Wrong guess again! ")
             print("")
             print("Heres a link that might help:")
-            print(QADict["Question #"+str(numran)+"Ref"])
+            try:
+                print(QADict["Question #"+str(numran)+"Ref"])
+            except:
+                print("No link?")
             print("")
