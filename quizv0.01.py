@@ -12,14 +12,14 @@ with open('textlist.txt', 'r', encoding="utf-8") as f:
     y = x.replace('\n',': ')
     z = y.split(': ')
     f.close()
-print("\x1b[1;31;40m"+"Welcome to the AWS Cloud Practitioner 2021 Complete Quiz."+"\x1b[0m")
+print("Welcome to the AWS Cloud Practitioner 2021 Complete Quiz.")
 progress = 1
-print("\x1b[1;32;40m"+"Input Progress (Question start #)"+"\x1b[0m")
+print("Input Progress (Question start #)")
 progress = input()
 timeinp = 0
 while not timeinp:
     try:
-        print("\x1b[1;32;40m"+"How long per question? (Default 83s -- 90 Minutes / 65 Questions)"+"\x1b[0m")
+        print("How long per question? (Default 83s -- 90 Minutes / 65 Questions)")
         timeinp = int(input())
     except Exception as e:
         print('Please enter an integer in seconds')    
@@ -32,26 +32,26 @@ for i in z:
             started = "yes"
     if "yes" in started:
         if "Question #" in i:
-            input("\x1b[2;30;44m"+"Press Enter to continue.."+"\x1b[0m")
+            input(+"Press Enter to continue..")
             print("")
-            print("\n"+"\x1b[6;30;42m"+i+"\x1b[0m")
+            print("\n"+i)
         elif "Correct Answer" in i:
             print("")
             countdown(timeinp)
-            ans = input("\x1b[1;32;40m"+"Input your Answer..   "+"\x1b[0m")
+            ans = input("Input your Answer..   ")
             print("")
-            print("\x1b[1;36;40m"+"Your Answer: "+ans+"\x1b[0m")
+            print("Your Answer: "+ans)
             print("")
-            print("\x1b[1;33;40m"+i+"\x1b[0m")
+            print(i)
         elif "Reference" in i:
-            input("\x1b[2;30;44m"+"Press Enter to continue.."+"\x1b[0m")
+            input(+"Press Enter to continue..")
             print("")
-            print("\x1b[2;30;43m"+i+"\x1b[0m")
+            print(i)
         elif "Explanation" in i:
-            print("\x1b[1;32;40m"+i+"\x1b[0m")
+            print(i)
             print("")
         elif "https://" in i:
-            print("\x1b[2;30;43m"+i+"\x1b[0m")
+            print(i)
             print("")
         else:
-            print("\x1b[1;31;40m"+i+"\x1b[0m")
+            print(i)
