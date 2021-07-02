@@ -64,6 +64,6 @@ for i in range(1,65):
         else:
             print("Wrong guess again! ")
             print("")
-            print("Heres a link that will help")
+            print("Heres a link that might help:")
             print(QADict["Question #"+str(numran)+"Ref"])
             print("")
