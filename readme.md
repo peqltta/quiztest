@@ -1,5 +1,5 @@
-<h2>How to Install</h2><br>
-Clone the repo<br>
+<h2>How to Install</h2>
+Clone the repo<br><br>
 Open terminal / cmd in the cloned folder<br>
 type:<br>
 <code>python quiz.py</code><br>
