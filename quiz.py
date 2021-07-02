@@ -1,6 +1,8 @@
 import random
 print("")
 print("Welcome to the Cloud Practitioner Quiz. 65 Questions. For Multiple choice answer in alphabetical order i.e AB, CE, BD")
+print("")
+print("")
 QADict = {}
 with open('textlist.txt', 'r', encoding="utf-8") as f:
     x = f.read()
