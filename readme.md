@@ -2,10 +2,10 @@
 Clone the repo<br><br>
 Open terminal / cmd in the cloned folder<br><br>
 type<br><br>
-                python quiz.py
+<code>python quiz.py</code>
 <br><br>
 or<br><br>
-                python3 quiz.py
+<code>python3 quiz.py</code>
 <br><br>
 <img src='https://snipboard.io/4N3b6Q.jpg'><br>
 <img src='https://snipboard.io/s8j3rQ.jpg'>
