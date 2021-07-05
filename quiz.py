@@ -1,49 +1,60 @@
-import random
-print("")
-print("Welcome to the Cloud Practitioner Quiz. 65 Questions. For Multiple choice answer in alphabetical order i.e AB, CE, BD")
-print("")
-print("")
-QADict = {}
-with open('textlist.txt', 'r', encoding="utf-8") as f:
-    x = f.read()
-    y = x.replace('\n',': ')
-    z = y.split(': ')
+from flask import Flask, render_template
+import random, copy
+import json
+
+app = Flask(__name__)
+with open('QADict.json') as f:
+    QADict = json.load(f)
     f.close()
-Question = ''
-for i in z:
-    if "Question #" in i:
-        Ques = i
-        qqq = 1
-    elif "Correct A" in i:
-        qqq = 0
-        ccc = 1
-    elif "Reference" in i:
-        ccc = 0
-        rrr = 1
-    elif "Explanation" in i:
-        rrr = 0
-        eee = 1
-    elif "https://" in i:
-        QADict[Ques+"Ref"] = i
-    else:
-        if qqq==1:   
-            if "A. " in i:
-                QADict[Ques+"A"] = i
-            elif "B. " in i:
-                QADict[Ques+"B"] = i
-            elif "C. " in i:
-                QADict[Ques+"C"] = i
-            elif "D. " in i:
-                QADict[Ques+"D"] = i
-            elif "E. " in i:
-                QADict[Ques+"E"] = i
-            else:
-                Question = Question + ' ' + i
-                QADict[Ques] = Question
-        elif ccc==1:
-            QADict[Ques+"Answer"] = i
-            Question = ''
-            ccc=0
+def new_question():
+    numran = random.randrange(1,671)
+    Question = QADict["Question #"+str(numran)]
+    Answers = [QADict["Question #"+str(numran)+"A"],QADict["Question #"+str(numran)+"B"],QADict["Question #"+str(numran)+"C"],QADict["Question #"+str(numran)+"D"]]
+    try:
+        Answers.append(QADict["Question #"+str(numran)+"E"])
+    except:
+        idkwhattodohere = 1+1
+    CorrectAnswer = QADict["Question #"+str(numran)+"Answer"]
+    Reference = QADict["Question #"+str(numran)+"Ref"]
+"""   
+def is_correct():
+    if UserAnswer = CorrectAnswer:
+        return True
+    if Useranswer != CorrectAnswer:
+        return False
+"""
+@app.route('/')
+
+def quiz():
+    return render_template('main.html')
+
+if __name__ == '__main_-':
+    app.run(debug=True)
+                               
+    
+
+
+"""
+def shuffle(q):
+    selected_keys = []
+    i = 0
+    while i < len(q):
+        current_selection = random.choice(q.keys())
+        if current_selection not in selected_keys:
+            selected_keys.append(current_selection)
+            i = i+1
+    return selected_keys
+questions_shuffled = shuffle(questions)
+
+
+
+
+
+
+
+
+
+
 for i in range(1,65):
     numran = random.randint(1,671)
     print(QADict["Question #"+str(numran)])
@@ -74,3 +85,5 @@ for i in range(1,65):
             except:
                 print("No link?")
             print("")
+
+"""

@@ -1,0 +1,13 @@
+<h1>Cloud Quiz</h1>
+<form action='/quiz' method='POST'>
+    <ol>
+        <li>Question%</li>
+        {% for i in Answers %}
+        <li>{{i}}</li>
+        <input type='checkbox' value='A' name='A' />
+        <input type='checkbox' value='A' name='B' />
+        <input type='checkbox' value='A' name='C' />
+        <input type='checkbox' value='A' name='D' />
+    </ol>
+    <input type="submit" value="submit" />
+</form>
