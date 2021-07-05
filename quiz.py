@@ -27,7 +27,7 @@ def quiz():
         idkwhattodohere+=1
     return render_template('main.html', q = Question, o = Answers, c = CorrectAnswer, l = Reference)
 if __name__ == '__main_-':
-    serve(app, host='0.0.0.0', port=80)
+    app.run(host='0.0.0.0')
 
 
 
