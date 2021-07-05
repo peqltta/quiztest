@@ -1,40 +1,43 @@
 from flask import Flask, render_template
 import random, copy
 import json
-
 app = Flask(__name__)
 with open('QADict.json') as f:
     QADict = json.load(f)
     f.close()
-def new_question():
+@app.route('/')
+def quiz():
+    Question = ""
+    Answers = []
+    CorrectAnswer = ""
+    Reference = ""
+    idkwhattodohere=0
     numran = random.randrange(1,671)
     Question = QADict["Question #"+str(numran)]
     Answers = [QADict["Question #"+str(numran)+"A"],QADict["Question #"+str(numran)+"B"],QADict["Question #"+str(numran)+"C"],QADict["Question #"+str(numran)+"D"]]
     try:
         Answers.append(QADict["Question #"+str(numran)+"E"])
     except:
-        idkwhattodohere = 1+1
+        idkwhattodohere+=1
     CorrectAnswer = QADict["Question #"+str(numran)+"Answer"]
-    Reference = QADict["Question #"+str(numran)+"Ref"]
+    try:
+        Reference = QADict["Question #"+str(numran)+"Ref"]
+    except:
+        idkwhattodohere+=1
+    return render_template('main.html', q = Question, o = Answers, c = CorrectAnswer, l = Reference)
+if __name__ == '__main_-':
+    app.run(debug=True)
+
+
+
+
 """   
 def is_correct():
     if UserAnswer = CorrectAnswer:
         return True
     if Useranswer != CorrectAnswer:
         return False
-"""
-@app.route('/')
 
-def quiz():
-    return render_template('main.html')
-
-if __name__ == '__main_-':
-    app.run(debug=True)
-                               
-    
-
-
-"""
 def shuffle(q):
     selected_keys = []
     i = 0
