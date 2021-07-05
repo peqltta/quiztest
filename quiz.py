@@ -2,11 +2,11 @@ from flask import Flask, render_template
 from waitress import serve
 import random, copy
 import json
-app = Flask(__name__)
+application = Flask(__name__)
 with open('QADict.json') as f:
     QADict = json.load(f)
     f.close()
-@app.route('/')
+@application.route('/')
 def quiz():
     Question = ""
     Answers = []
@@ -27,7 +27,7 @@ def quiz():
         idkwhattodohere+=1
     return render_template('main.html', q = Question, o = Answers, c = CorrectAnswer, l = Reference)
 if __name__ == '__main_-':
-    app.run(host='0.0.0.0')
+    application.run(host='0.0.0.0')
 
 
 
