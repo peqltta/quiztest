@@ -115,7 +115,7 @@
                 
                 label,
                 p {
-                    font-size: 0.7em;
+                    font-size: 0.4em;
                     margin: 1%;
                     color: #CCC;
                 }
@@ -129,7 +129,6 @@
                 }
                 
                 li {
-                    font-size: 0.9em;
                     color: #eee;
                     margin: 1%;
                     list-style: none;
@@ -151,6 +150,7 @@
                     margin-top: 5px;
                     margin-left: 4rem;
                     padding: 0.1em;
+                    font-size: 0.4em
                 }
                 
                 footer p {
