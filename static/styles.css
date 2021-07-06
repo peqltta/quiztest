@@ -110,8 +110,8 @@
                     margin-left: 2rem;
                 }
                 
-                [type=checkbox] {
-                    padding: 2px;
+                label {
+                    margin-right: 5px;
                 }
                 
                 li {
