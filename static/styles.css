@@ -109,13 +109,13 @@
                 }
                 
                 h3 {
-                    font-size: 0.6em;
+                    font-size: 0.7em;
                     padding: 1%;
                 }
                 
                 label,
                 p {
-                    font-size: 0.4em;
+                    font-size: 0.6em;
                     margin: 1%;
                     color: #CCC;
                 }
@@ -150,7 +150,7 @@
                     margin-top: 5px;
                     margin-left: 4rem;
                     padding: 0.1em;
-                    font-size: 0.4em
+                    font-size: 0.6em
                 }
                 
                 footer p {
