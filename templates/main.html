@@ -1,4 +1,14 @@
 <link rel="stylesheet" href="/static/styles.css">
+<script type="text/javascript">
+    function showAnswers() {
+        var x = document.getElementById("hidden-answer");
+        if (x.style.display == "none") {
+            x.style.display = "block";
+        } else {
+            x.style.display = "none";
+        }
+    }
+</script>
 <header>
     <h1>Cloud Practitioner Quiz</h1>
 </header>
@@ -18,8 +28,14 @@
             <label for='C'>C</label><input type='checkbox' id='C' value='C' name='C' />
             <label for='D'>D</label><input type='checkbox' id='D' value='D' name='D' />
             <label for='E'>E</label><input type='checkbox' id='E' value='E' name='E' />
-            </span>
-            <br><input type="submit" value="Submit" />
+            </span><br><input type="submit" value="Submit" />
+            <input type="button" onclick="showAnswers()" value="Answers" />
+            <div id="hidden-answer" style="display: none;">
+                <p>Correct Answer: {{ c }}</p><br>
+                <p>Link:
+                    <a href="{{ l }}">{{ l }}</a>
+                </p><br>
+            </div>
         </form>
     </div>
 </main>
