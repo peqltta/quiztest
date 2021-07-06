@@ -65,6 +65,7 @@
                                
                                #buttons {
                                    display: flex;
+                                   padding-top: 5px;
                                    width: 100%;
                                    justify-content: center;
                                }
@@ -87,11 +88,31 @@
                                    margin-top: 5px;
                                    padding: 0.1em;
                                    margin-left: 0.5rem;
+                                   margin-top: 5px;
+                                   padding: 0.1em;
+                                   background-color: #8f8;
+                                   width: 125px;
+                                   height: 30px;
+                                   border: none;
+                                   outline: none;
+                                   cursor: pointer;
+                                   text-transform: uppercase;
+                                   border-radius: 4px;
+                                   transition: .3s;
                                }
                                
                                input[type=button] {
                                    margin-top: 5px;
                                    padding: 0.1em;
+                                   background-color: #8f8;
+                                   width: 125px;
+                                   height: 30px;
+                                   border: none;
+                                   outline: none;
+                                   cursor: pointer;
+                                   text-transform: uppercase;
+                                   border-radius: 4px;
+                                   transition: .3s;
                                }
                                
                                #homelinks {
