@@ -124,5 +124,7 @@
                                            }
                                            
                                            #homelinks {
+                                               display: flex;
                                                margin-left: 10%;
+                                               justify-content: space-evenly;
                                            }
