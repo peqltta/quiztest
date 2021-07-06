@@ -104,6 +104,11 @@
                     padding: 1%;
                 }
                 
+                h3 {
+                    font-size: 0.9em;
+                    padding: 1%;
+                }
+                
                 label,
                 p {
                     font-size: 0.9em;
