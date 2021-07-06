@@ -8,6 +8,9 @@ with open('QADict.json') as f:
 @application.route('/')
 def main():
     return render_template('index.html')
+@application.route('/login')
+def loginpage():
+    return render_template('login.html')
 @application.route('/quiz')
 def quiz():
     global CorrectAnswer
