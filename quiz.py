@@ -34,16 +34,17 @@ def quiz():
 def submit():
     lin = ''
     dat = ''
-    correct = 'no'
+    correct = 'No'
     data = request.form
     datlist = list(data.values())
     dat=dat.join([str(i)for i in datlist])
-    response = 'Correct: ' + correct + ' Correct Answer: '+ CorrectAnswer
+    if dat==CorrectAnswer:
+        correct='Yes'
     try:
         lin = Reference
     except:
         lin = 'No Link'
-    return render_template('answer.html', c = CorrectAnswer, l = lin, d = dat)
+    return render_template('answer.html', c = CorrectAnswer, l = lin, d = dat, x = correct)
 
 if __name__ == '__main_-':
     application.run(host='0.0.0.0')
