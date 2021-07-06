@@ -1,0 +1,144 @@
+/* VARIABLES AND SETUP */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+ :root {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 1.1rem;
+    color: #fff;
+    margin: 0;
+    left: 0;
+}
+
+
+/* CONTAINER */
+
+body {
+    background-color: #222;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+
+/* HEADER */
+
+header {
+    position: fixed;
+    top: 0;
+}
+
+nav {
+    background-color: #555;
+    width: 100vw;
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 2%;
+}
+
+
+/* NAV BAR + ITEMS */
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    float: left;
+}
+
+nav a {
+    display: block;
+    background-color: #444;
+    color: #fff;
+    text-decoration: none;
+    height: 1.3em;
+    padding: 0.5em 1em 0.5em 1em;
+}
+
+
+/* NAV HOVER */
+
+nav a:hover {
+    color: #ccc;
+    background-color: #666;
+}
+
+
+/*  NAV DROP DOWN */
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content a {
+    text-decoration: none;
+    display: block;
+    background-color: #222;
+}
+
+
+/* MAIN CONTENT */
+
+main {
+    margin-top: 3em;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+}
+
+section {
+    color: #8f8;
+    width: 80%;
+    scroll-margin-top: 2.5em;
+}
+
+section h1 {
+    font-size: 1.4em;
+    padding: 1%;
+}
+
+section h2 {
+    font-size: 1.2em;
+    padding: 1%;
+}
+
+section p {
+    font-size: 0.9em;
+    margin: 1%;
+    color: #DDD;
+}
+
+footer {
+    background-color: #444;
+    width: 100vw;
+    height: 2.5vw;
+    position: fixed;
+    bottom: 0;
+}
+
+footer p {
+    text-align: center;
+}
+
+input[type=text] {
+    width: 80%;
+    margin-right: 10%;
+}
+
+input[type=email] {
+    width: 80%;
+    margin-right: 10%;
+}
