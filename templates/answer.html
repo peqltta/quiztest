@@ -1,0 +1,16 @@
+<link rel="stylesheet" href="/static/styles.css">
+<header>
+    <h1>Cloud Practitioner Quiz</h1>
+</header>
+<main>
+    <div id="answer">
+        <p>Your Answer: {{ d }}</p>
+        <p>Correct Answer: {{ c }}</p><br>
+        <p>Link:
+            <a href="{{ l }}">{{ l }}</a>
+        </p><br>
+    </div>
+    <form action='/' method='GET'>
+        <input type="submit" value="Next" />
+    </form>
+</main>

@@ -13,8 +13,9 @@ def quiz():
     global numran
     Question = ""
     Answers = []
+    global Reference
+    Reference = ''
     CorrectAnswer = ""
-    Reference = ""
     idkwhattodohere=0
     numran = random.randrange(1,671)
     Question = QADict["Question #"+str(numran)]
@@ -31,40 +32,27 @@ def quiz():
     return render_template('main.html', q = Question, o = Answers, c = CorrectAnswer, l = Reference)
 @application.route('/', methods=['POST'])
 def submit():
+    l = ''
     correct = 'no'
+    d = ''
     data = request.form
     for ans in data.values():
+        d = d + ans
         if ans not in CorrectAnswer:
             correct = 'no'
         else:
             correct = 'yes'
     response = 'Correct: ' + correct + ' Correct Answer: '+ CorrectAnswer
-    return response
+    try:
+        l = Reference
+    except:
+        l = 'No Link'
+    return render_template('answer.html', c = CorrectAnswer, l = l, d = d)
 
 if __name__ == '__main_-':
     application.run(host='0.0.0.0')
 
-"""   
-def shuffle(q):
-    selected_keys = []
-    i = 0
-    while i < len(q):
-        current_selection = random.choice(q.keys())
-        if current_selection not in selected_keys:
-            selected_keys.append(current_selection)
-            i = i+1
-    return selected_keys
-questions_shuffled = shuffle(questions)
-
-
-
-
-
-
-
-
-
-
+"""
 for i in range(1,65):
     numran = random.randint(1,671)
     print(QADict["Question #"+str(numran)])
