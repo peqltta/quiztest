@@ -110,7 +110,7 @@
                     margin-left: 2rem;
                 }
                 
-                form checkbox {
+                [type=checkbox] {
                     padding: 2px;
                 }
                 
