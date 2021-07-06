@@ -36,14 +36,12 @@ def submit():
     dat = ''
     correct = 'no'
     data = request.form
-    for x in data.values():
-        dat+=dat+x
     response = 'Correct: ' + correct + ' Correct Answer: '+ CorrectAnswer
     try:
         lin = Reference
     except:
         lin = 'No Link'
-    return render_template('answer.html', c = CorrectAnswer, l = lin, d = dat)
+    return render_template('answer.html', c = CorrectAnswer, l = lin, d = data)
 
 if __name__ == '__main_-':
     application.run(host='0.0.0.0')
