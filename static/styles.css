@@ -26,6 +26,7 @@
                 header {
                     position: fixed;
                     top: 0;
+                    padding-bottom: 2%;
                 }
                 
                 nav {
@@ -80,7 +81,7 @@
                 /* MAIN CONTENT */
                 
                 main {
-                    margin-top: 3em;
+                    margin-top: 5%;
                     display: flex;
                     justify-content: space-around;
                     align-items: left;
