@@ -139,6 +139,10 @@
                     bottom: 0;
                 }
                 
+                input [type=submit] {
+                    margin-left: 1rem;
+                }
+                
                 footer p {
                     text-align: center;
                 }
