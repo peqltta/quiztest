@@ -89,6 +89,10 @@
                     flex-direction: column;
                 }
                 
+                a {
+                    color: #EEE;
+                }
+                
                 h1 {
                     color: #8f8;
                     font-size: 1.4em;
@@ -104,7 +108,7 @@
                 p {
                     font-size: 1em;
                     margin: 1%;
-                    color: #DDD;
+                    color: #CCC;
                 }
                 
                 form {
