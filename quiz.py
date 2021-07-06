@@ -1,10 +1,12 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request
 import random, copy
 import json
 application = Flask(__name__)
 with open('QADict.json') as f:
     QADict = json.load(f)
     f.close()
+CorrectAnswer = ""
+UserAnswer = ""
 @application.route('/')
 def quiz():
     Question = ""
@@ -27,18 +29,15 @@ def quiz():
     return render_template('main.html', q = Question, o = Answers, c = CorrectAnswer, l = Reference)
 @application.route('/submit', methods=['POST'])
 def submit():
-    correct = 0
-    
+    data = request.form
+    res = request.form + ' ' + CorrectAnswer
+    return res
+
 
 
 if __name__ == '__main_-':
     application.run(host='0.0.0.0')
 
-def is_correct():
-    if UserAnswer = CorrectAnswer:
-        return True
-    if Useranswer != CorrectAnswer:
-        return False
 """   
 def shuffle(q):
     selected_keys = []
