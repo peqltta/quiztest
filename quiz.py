@@ -25,19 +25,21 @@ def quiz():
     except:
         idkwhattodohere+=1
     return render_template('main.html', q = Question, o = Answers, c = CorrectAnswer, l = Reference)
+@application.route('/submit', methods=['POST'])
+def submit():
+    correct = 0
+    
+
+
 if __name__ == '__main_-':
     application.run(host='0.0.0.0')
 
-
-
-
-"""   
 def is_correct():
     if UserAnswer = CorrectAnswer:
         return True
     if Useranswer != CorrectAnswer:
         return False
-
+"""   
 def shuffle(q):
     selected_keys = []
     i = 0
