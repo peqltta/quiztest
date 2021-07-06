@@ -30,24 +30,20 @@ def quiz():
     except:
         idkwhattodohere+=1
     return render_template('main.html', q = Question, o = Answers, c = CorrectAnswer, l = Reference)
-@application.route('/', methods=['POST'])
+@application.route('/answer', methods=['GET'])
 def submit():
-    l = ''
+    lin = ''
+    dat = ''
     correct = 'no'
-    d = ''
     data = request.form
-    for ans in data.values():
-        d = d + ans
-        if ans not in CorrectAnswer:
-            correct = 'no'
-        else:
-            correct = 'yes'
+    for x in data.values():
+        dat+=dat+x
     response = 'Correct: ' + correct + ' Correct Answer: '+ CorrectAnswer
     try:
-        l = Reference
+        lin = Reference
     except:
-        l = 'No Link'
-    return render_template('answer.html', c = CorrectAnswer, l = l, d = d)
+        lin = 'No Link'
+    return render_template('answer.html', c = CorrectAnswer, l = lin, d = dat)
 
 if __name__ == '__main_-':
     application.run(host='0.0.0.0')
