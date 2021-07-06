@@ -27,6 +27,7 @@
                     position: fixed;
                     top: 0;
                     padding-bottom: 2%;
+                    width: 100%;
                 }
                 
                 nav {
@@ -89,6 +90,7 @@
                 }
                 
                 h1 {
+                    color: 8f8;
                     font-size: 1.4em;
                     padding: 1%;
                 }
