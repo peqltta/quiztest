@@ -106,6 +106,10 @@
                     color: #DDD;
                 }
                 
+                form {
+                    margin-left: 2rem;
+                }
+                
                 li {
                     font-size: 0.7em;
                     color: #eee;
