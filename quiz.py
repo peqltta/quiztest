@@ -30,8 +30,7 @@ def quiz():
 @application.route('/submit', methods=['POST'])
 def submit():
     data = request.form
-    res = request.form + ' ' + CorrectAnswer
-    return res
+    return data, CorrectAnswer
 
 
 
