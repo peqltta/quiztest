@@ -28,9 +28,10 @@
             <label for='C'>C</label><input type='checkbox' id='C' value='C' name='C' />
             <label for='D'>D</label><input type='checkbox' id='D' value='D' name='D' />
             <label for='E'>E</label><input type='checkbox' id='E' value='E' name='E' />
-            </span><br><input type="submit" value="Submit" />
-            <input type="button" onclick="showAnswers()" value="Cheat" />
+            </span><span id='buttons'><input type="submit" value="Submit" /><input type="button" onclick="showAnswers()" value="Cheat" />
+            </span>
             <div id="hidden-answer" style="display: none;">
+                <br>
                 <p>Correct Answer: {{ c }}</p><br>
                 <p>Link:
                     <a href="{{ l }}">{{ l }}</a>

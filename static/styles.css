@@ -19,9 +19,10 @@
                                }
                                
                                header {
+                                   display: flex;
                                    top: 0;
-                                   margin-left: 10%;
                                    width: 100%;
+                                   justify-content: center;
                                }
                                
                                .qblock {
@@ -45,7 +46,7 @@
                                h2 {
                                    color: #8f8;
                                    margin: 2%;
-                                   width: 90%;
+                                   width: 95%;
                                }
                                
                                h3 {}
@@ -56,8 +57,16 @@
                                }
                                
                                #options {
-                                   margin-left: 2%;
+                                   display: flex;
                                    padding-top: 2%;
+                                   width: 100%;
+                                   justify-content: center;
+                               }
+                               
+                               #buttons {
+                                   display: flex;
+                                   width: 100%;
+                                   justify-content: center;
                                }
                                
                                form {}
@@ -76,12 +85,11 @@
                                
                                input[type=submit] {
                                    margin-top: 5px;
-                                   margin-left: 4rem;
                                    padding: 0.1em;
                                }
                                
                                input[type=button] {
                                    margin-top: 5px;
-                                   margin-left: 4rem;
+                                   margin-left: 0.5rem;
                                    padding: 0.1em;
                                }
