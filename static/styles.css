@@ -99,23 +99,17 @@ main {
     flex-direction: column;
 }
 
-section {
-    color: #8f8;
-    width: 80%;
-    scroll-margin-top: 2.5em;
-}
-
-section h1 {
+h1 {
     font-size: 1.4em;
     padding: 1%;
 }
 
-section h2 {
+h2 {
     font-size: 1.2em;
     padding: 1%;
 }
 
-section p {
+p {
     font-size: 0.9em;
     margin: 1%;
     color: #DDD;
@@ -133,7 +127,7 @@ footer p {
     text-align: center;
 }
 
-input[type=text] {
+input[type=checkbox] {
     width: 80%;
     margin-right: 10%;
 }
