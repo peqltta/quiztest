@@ -23,6 +23,7 @@
                 /* HEADER */
                 
                 header {
+                    display: flex;
                     position: fixed;
                     top: 0;
                     padding-bottom: 2%;
