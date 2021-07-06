@@ -100,7 +100,8 @@
                     padding: 1%;
                 }
                 
-                label p {
+                label,
+                p {
                     font-size: 1em;
                     margin: 1%;
                     color: #DDD;
