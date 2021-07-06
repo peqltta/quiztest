@@ -126,13 +126,3 @@ footer {
 footer p {
     text-align: center;
 }
-
-input[type=checkbox] {
-    width: 20%;
-    margin-right: 10%;
-}
-
-input[type=email] {
-    width: 80%;
-    margin-right: 10%;
-}
