@@ -3,15 +3,17 @@
     <h1>Cloud Practitioner Quiz</h1>
 </header>
 <main>
-    <div id="answer">
-        <p>Your Answer: {{ d }}</p>
-        <p>Correct Answer: {{ c }}</p><br>
-        <p>Link:
-            <a href="{{ l }}">{{ l }}</a>
-        </p><br>
-        <p>Correct: {{ x }}</p>
+    <div class="qblock">
+        <div id="answer">
+            <p>Your Answer: {{ d }}</p>
+            <p>Correct Answer: {{ c }}</p><br>
+            <p>Link:
+                <a href="{{ l }}">{{ l }}</a>
+            </p><br>
+            <p>Correct: {{ x }}</p>
+        </div>
+        <form action='/' method='GET'>
+            <input type="submit" value="Next" />
+        </form>
     </div>
-    <form action='/' method='GET'>
-        <input type="submit" value="Next" />
-    </form>
 </main>
