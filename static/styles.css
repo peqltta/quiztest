@@ -86,10 +86,10 @@
                                input[type=submit] {
                                    margin-top: 5px;
                                    padding: 0.1em;
+                                   margin-left: 0.5rem;
                                }
                                
                                input[type=button] {
                                    margin-top: 5px;
-                                   margin-left: 0.5rem;
                                    padding: 0.1em;
                                }

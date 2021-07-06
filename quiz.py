@@ -5,15 +5,12 @@ application = Flask(__name__)
 with open('QADict.json') as f:
     QADict = json.load(f)
     f.close()
-CorrectAnswer = ''
-UserAnswer = ""
 @application.route('/')
 def quiz():
     global CorrectAnswer
     global numran
     Question = ""
     Answers = []
-    global Reference
     Reference = ''
     CorrectAnswer = ""
     idkwhattodohere=0
@@ -30,55 +27,6 @@ def quiz():
     except:
         idkwhattodohere+=1
     return render_template('main.html', q = Question, o = Answers, c = CorrectAnswer, l = Reference)
-@application.route('/answer', methods=['POST'])
-def submit():
-    lin = ''
-    dat = ''
-    correct = 'No'
-    data = request.form
-    datlist = list(data.values())
-    dat=dat.join([str(i)for i in datlist])
-    if dat==CorrectAnswer:
-        correct='Yes'
-    try:
-        lin = Reference
-    except:
-        lin = 'No Link'
-    return render_template('answer.html', c = CorrectAnswer, l = lin, d = dat, x = correct)
 
 if __name__ == '__main_-':
     application.run(host='0.0.0.0')
-
-"""
-for i in range(1,65):
-    numran = random.randint(1,671)
-    print(QADict["Question #"+str(numran)])
-    print("")
-    print(QADict["Question #"+str(numran)+"A"])
-    print(QADict["Question #"+str(numran)+"B"])
-    print(QADict["Question #"+str(numran)+"C"])
-    print(QADict["Question #"+str(numran)+"D"])
-    try:
-        print(QADict["Question #"+str(numran)+"E"])
-    except:
-        hi = 1
-    print("")
-    correct = 0
-    while correct == 0:    
-        ans = input("Please Input your Answer ")
-        print("")
-        if ans == QADict["Question #"+str(numran)+"Answer"]:
-            print("You are right! ")
-            print("")
-            correct = 1
-        else:
-            print("Wrong guess again! ")
-            print("")
-            print("Heres a link that might help:")
-            try:
-                print(QADict["Question #"+str(numran)+"Ref"])
-            except:
-                print("No link?")
-            print("")
-
-"""

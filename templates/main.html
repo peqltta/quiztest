@@ -14,7 +14,7 @@
 </header>
 <main>
     <div class=qblock>
-        <form action='/answer' method='POST'>
+        <form action='/' method='GET'>
             <h2>{{ q }}</h2>
             <ul>
                 {%for i in range(0, 5)%}
@@ -28,7 +28,7 @@
             <label for='C'>C</label><input type='checkbox' id='C' value='C' name='C' />
             <label for='D'>D</label><input type='checkbox' id='D' value='D' name='D' />
             <label for='E'>E</label><input type='checkbox' id='E' value='E' name='E' />
-            </span><span id='buttons'><input type="submit" value="Submit" /><input type="button" onclick="showAnswers()" value="Cheat" />
+            </span><span id='buttons'><input type="button" onclick="showAnswers()" value="Answer" /><input type="submit" value="Next" />
             </span>
             <div id="hidden-answer" style="display: none;">
                 <br>
