@@ -124,10 +124,11 @@
                     margin-right: 5px;
                 }
                 
-                f li {
+                li {
                     font-size: 0.7em;
                     color: #eee;
                     margin: 1%;
+                    list-style: none;
                 }
                 
                 footer {
