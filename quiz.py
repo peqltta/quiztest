@@ -1,5 +1,4 @@
 from flask import Flask, render_template
-from waitress import serve
 import random, copy
 import json
 application = Flask(__name__)

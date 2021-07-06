@@ -142,9 +142,14 @@
                     bottom: 0;
                 }
                 
+                #hidden-answer {
+                    visibility: hidden;
+                }
+                
                 input[type=submit] {
                     margin-top: 5px;
                     margin-left: 4rem;
+                    padding: 0.1em;
                 }
                 
                 footer p {
