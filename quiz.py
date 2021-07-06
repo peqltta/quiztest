@@ -29,8 +29,14 @@ def quiz():
     return render_template('main.html', q = Question, o = Answers, c = CorrectAnswer, l = Reference)
 @application.route('/submit', methods=['POST'])
 def submit():
+    correct = 'no'
     data = request.form
-    return data, CorrectAnswer
+    for c in CorrectAnswer:
+        if c in data.values():
+            correct = 'yes'
+        else:
+            correct = 'no'
+    return correct
 
 
 
