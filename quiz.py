@@ -6,6 +6,9 @@ with open('QADict.json') as f:
     QADict = json.load(f)
     f.close()
 @application.route('/')
+def main():
+    return render_template('index.html')
+@application.route('/quiz')
 def quiz():
     global CorrectAnswer
     global numran
