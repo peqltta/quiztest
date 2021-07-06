@@ -5,10 +5,12 @@ application = Flask(__name__)
 with open('QADict.json') as f:
     QADict = json.load(f)
     f.close()
-CorrectAnswer = ""
+CorrectAnswer = ''
 UserAnswer = ""
 @application.route('/')
 def quiz():
+    global CorrectAnswer
+    global numran
     Question = ""
     Answers = []
     CorrectAnswer = ""
@@ -27,18 +29,17 @@ def quiz():
     except:
         idkwhattodohere+=1
     return render_template('main.html', q = Question, o = Answers, c = CorrectAnswer, l = Reference)
-@application.route('/submit', methods=['POST'])
+@application.route('/', methods=['POST'])
 def submit():
     correct = 'no'
     data = request.form
-    for c in CorrectAnswer:
-        if c in data.values():
-            correct = 'yes'
-        else:
+    for ans in data.values():
+        if ans not in CorrectAnswer:
             correct = 'no'
-    return correct
-
-
+        else:
+            correct = 'yes'
+    response = 'Correct: ' + correct + ' Correct Answer: '+ CorrectAnswer
+    return response
 
 if __name__ == '__main_-':
     application.run(host='0.0.0.0')
