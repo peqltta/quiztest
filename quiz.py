@@ -11,7 +11,10 @@ def main():
 @application.route('/login')
 def loginpage():
     return render_template('login.html')
-@application.route('/quiz')
+@application.route('/quiz', methods=['POST'])
+def checkanswers():
+    print('here')
+@application.route('/quiz', methods=['GET'])
 def quiz():
     global CorrectAnswer
     global numran

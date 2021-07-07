@@ -7,6 +7,31 @@
     <title>Cloud Quiz</title>
 </head>
 <script type="text/javascript">
+    function checkAnswers() {
+        let ans = ' ';
+        if (document.getElementById("A").checked == true) {
+            ans += 'A';
+        }
+        if (document.getElementById("B").checked == true) {
+            ans += 'B';
+        }
+        if (document.getElementById("C").checked == true) {
+            ans += 'C';
+        }
+        if (document.getElementById("D").checked == true) {
+            ans += 'D';
+        }
+        if (document.getElementById("E").checked == true) {
+            ans += 'E';
+        }
+        ans = ans.trim();
+        let cans = '{{ c }}';
+        if (ans == cans){
+            document.getElementById('output').innerHTML = 'Correct!'
+        } else {
+            document.getElementById('output').innerHTML = 'Incorrect!'
+        }
+    }
     function showAnswers() {
         var x = document.getElementById("hidden-answer");
         if (x.style.display == "none") {
@@ -35,13 +60,16 @@
             <label for='C'>C<input type='checkbox' id='C' value='C' name='C' /><span class="checkmark"></span></label>
             <label for='D'>D<input type='checkbox' id='D' value='D' name='D' /><span class="checkmark"></span></label>
             <label for='E'>E<input type='checkbox' id='E' value='E' name='E' /><span class="checkmark"></span></label>
-            </span><span id='buttons'><input type="button" onclick="showAnswers()" value="Answer" /><input type="submit" value="Next" />
+            </span><span id='buttons'><input type="button" onclick="checkAnswers()" value="Check" /><input type="button" onclick="showAnswers()" value="Cheat" /><input type="submit" value="Next" />
             </span>
+            <h3 id="output"></h3>
             <div id="hidden-answer" style="display: none;">
                 <br>
-                <p>Correct Answer: {{ c }}</p><br>
+                <p>Correct Answer:
+                    <span id="answerr">{{ c }}</span></p><br>
+                <li id="correctans" value="{{ c }}"></li>
                 <p>Link:
-                    <a href="{{ l }}">{{ l }}</a>
+                    <a href=" {{ l }} ">{{ l }}</a>
                 </p><br>
             </div>
         </form>

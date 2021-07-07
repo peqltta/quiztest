@@ -111,6 +111,7 @@
                                            
                                            input[type=button] {
                                                margin-top: 5px;
+                                               margin-left: 0.5rem;
                                                padding: 0.1em;
                                                background-color: #8f8;
                                                width: 125px;
@@ -126,4 +127,9 @@
                                            #homelinks {
                                                display: flex;
                                                justify-content: space-evenly;
+                                           }
+
+                                           #output {
+                                               margin-left: 10%;
+                                               margin-top: 2%;
                                            }
