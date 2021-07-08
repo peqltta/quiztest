@@ -24,6 +24,8 @@ def quizprog():
         try:
             pronum = int(prog)
             pronum+=1
+            if pronum > 671:
+                pronum = 671
             prog = str(pronum)
         except:
             prog = 1
@@ -31,6 +33,8 @@ def quizprog():
         try:
             pronum = int(prog)
             pronum-=1
+            if pronum > 671:
+                pronum = 671
             prog= str(pronum)
         except:
             prog=1
