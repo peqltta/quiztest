@@ -44,12 +44,16 @@ def quizprog():
         Answers.append(QADict["Question #"+str(prog)+"E"])
     except:
         idkwhattodohere+=1
+    try:
+        Answers.append(QADict["Question #"+str(prog)+"F"])
+    except:
+        idkwhattodohere+=1
     CorrectAnswer = QADict["Question #"+str(prog)+"Answer"]
     try:
         Reference = QADict["Question #"+str(prog)+"Ref"]
     except:
         idkwhattodohere+=1
-    return render_template('mainorder.html', q = Question, o = Answers, c = CorrectAnswer, l = Reference, p = prog)
+    return render_template('main.html', q = Question, o = Answers, c = CorrectAnswer, l = Reference, p = prog)
 @application.route('/quiz', methods=['GET'])
 def quizfirst():
     global CorrectAnswer
@@ -63,6 +67,10 @@ def quizfirst():
     Answers = [QADict["Question #"+str(prog)+"A"],QADict["Question #"+str(prog)+"B"],QADict["Question #"+str(prog)+"C"],QADict["Question #"+str(prog)+"D"]]
     try:
         Answers.append(QADict["Question #"+str(prog)+"E"])
+    except:
+        idkwhattodohere+=1
+    try:
+        Answers.append(QADict["Question #"+str(prog)+"F"])
     except:
         idkwhattodohere+=1
     CorrectAnswer = QADict["Question #"+str(prog)+"Answer"]

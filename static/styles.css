@@ -130,7 +130,6 @@
                                            }
 
                                            #output {
-                                               margin-left: 10%;
                                                margin-top: 2%;
                                            }
                                            #qnum {
@@ -141,4 +140,17 @@
                                               }
                                               input[type=text]{
                                                 margin-left: 1%;
-                                              }   
+                                              }
+                                              #foot {
+                                                  display: flex;
+                                                  width: 100%;
+                                                  justify-content: center;
+                                                  margin-top: 2%;
+                                                  padding-right: 5%;
+                                              }
+                                              #foot1 {
+                                                display: flex;
+                                                width: 100%;
+                                                justify-content: center;
+                                                margin-top: 2%;
+                                            }
