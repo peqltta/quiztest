@@ -133,3 +133,12 @@
                                                margin-left: 10%;
                                                margin-top: 2%;
                                            }
+                                           #qnum {
+                                                display: flex;
+                                                width: 100%;
+                                                justify-content: center;
+                                                margin-top: 2%;
+                                              }
+                                              input[type=text]{
+                                                margin-left: 1%;
+                                              }   

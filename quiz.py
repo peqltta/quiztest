@@ -12,30 +12,60 @@ def main():
 def loginpage():
     return render_template('login.html')
 @application.route('/quiz', methods=['POST'])
-def checkanswers():
-    print('here')
-@application.route('/quiz', methods=['GET'])
-def quiz():
+def quizprog():
     global CorrectAnswer
-    global numran
     Question = ""
     Answers = []
     Reference = ''
     CorrectAnswer = ""
     idkwhattodohere=0
-    numran = random.randrange(1,671)
-    Question = QADict["Question #"+str(numran)]
-    Answers = [QADict["Question #"+str(numran)+"A"],QADict["Question #"+str(numran)+"B"],QADict["Question #"+str(numran)+"C"],QADict["Question #"+str(numran)+"D"]]
+    prog = request.form['qn']
+    if request.form['btn'] == 'Next':
+        try:
+            pronum = int(prog)
+            pronum+=1
+            prog = str(pronum)
+        except:
+            prog = 1
+    elif request.form['btn'] == 'Back':
+        try:
+            pronum = int(prog)
+            pronum-=1
+            prog= str(pronum)
+        except:
+            prog=1
+    Question = QADict["Question #"+str(prog)]
+    Answers = [QADict["Question #"+str(prog)+"A"],QADict["Question #"+str(prog)+"B"],QADict["Question #"+str(prog)+"C"],QADict["Question #"+str(prog)+"D"]]
     try:
-        Answers.append(QADict["Question #"+str(numran)+"E"])
+        Answers.append(QADict["Question #"+str(prog)+"E"])
     except:
         idkwhattodohere+=1
-    CorrectAnswer = QADict["Question #"+str(numran)+"Answer"]
+    CorrectAnswer = QADict["Question #"+str(prog)+"Answer"]
     try:
-        Reference = QADict["Question #"+str(numran)+"Ref"]
+        Reference = QADict["Question #"+str(prog)+"Ref"]
     except:
         idkwhattodohere+=1
-    return render_template('main.html', q = Question, o = Answers, c = CorrectAnswer, l = Reference)
-
+    return render_template('mainorder.html', q = Question, o = Answers, c = CorrectAnswer, l = Reference, p = prog)
+@application.route('/quiz', methods=['GET'])
+def quizfirst():
+    global CorrectAnswer
+    Question = ""
+    Answers = []
+    Reference = ''
+    CorrectAnswer = ""
+    idkwhattodohere=0
+    prog = 1
+    Question = QADict["Question #"+str(prog)]
+    Answers = [QADict["Question #"+str(prog)+"A"],QADict["Question #"+str(prog)+"B"],QADict["Question #"+str(prog)+"C"],QADict["Question #"+str(prog)+"D"]]
+    try:
+        Answers.append(QADict["Question #"+str(prog)+"E"])
+    except:
+        idkwhattodohere+=1
+    CorrectAnswer = QADict["Question #"+str(prog)+"Answer"]
+    try:
+        Reference = QADict["Question #"+str(prog)+"Ref"]
+    except:
+        idkwhattodohere+=1
+    return render_template('mainorder.html', q = Question, o = Answers, c = CorrectAnswer, l = Reference, p = prog)
 if __name__ == '__main_-':
     application.run(host='0.0.0.0')
