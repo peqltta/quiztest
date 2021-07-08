@@ -41,6 +41,9 @@
             x.style.display = "none";
         }
     }
+    function randQuest() {
+        document.getElementById('qn').value = Math.floor(Math.random() * 670) + 1;
+    }
 </script>
 <header>
     <h1>Cloud Practitioner Quiz</h1>
@@ -63,7 +66,7 @@
             <label for='D'>D<input type='checkbox' id='D' value='D' name='D' /><span class="checkmark"></span></label>
             <label for='E'>E<input type='checkbox' id='E' value='E' name='E' /><span class="checkmark"></span></label>
             </span><span id='buttons'><input type="submit" name="btn" value="Back" /><input type="button" onclick="checkAnswers()" value="Check" /><input type="button" onclick="showAnswers()" value="Cheat" /><input type="submit" name="btn" value="Goto" /><br><input type="submit" name="btn" value="Next" />
-                </span><span id='qnum'><label for="qn">Question #:</label><input type='text' name='qn' value='{{ p }}'/></span>
+                </span><span id='qnum'><label for="qn">Question #:</label><input type='text' id="qn" name='qn' value='{{ p }}'/><input type="button" onclick="randQuest()" value="Random" /></span>
             <h3 id="output"></h3>
             <div id="hidden-answer" style="display: none;">
                 <br>
