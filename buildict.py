@@ -33,6 +33,8 @@ for i in z:
                 QADict[Ques+"D"] = i
             elif "E. " in i:
                 QADict[Ques+"E"] = i
+            elif "F. " in i:
+                QADict[Ques+"F"] = i
             else:
                 Question = Question + ' ' + i
                 QADict[Ques] = Question
