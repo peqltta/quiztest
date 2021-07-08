@@ -70,6 +70,6 @@ def quizfirst():
         Reference = QADict["Question #"+str(prog)+"Ref"]
     except:
         idkwhattodohere+=1
-    return render_template('mainorder.html', q = Question, o = Answers, c = CorrectAnswer, l = Reference, p = prog)
+    return render_template('main.html', q = Question, o = Answers, c = CorrectAnswer, l = Reference, p = prog)
 if __name__ == '__main_-':
     application.run(host='0.0.0.0')
