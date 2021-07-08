@@ -31,6 +31,7 @@
         } else {
             document.getElementById('output').innerHTML = 'Incorrect!'
         }
+        setTimeout(() => { document.getElementById('output').innerHTML = ' '; }, 2000);
     }
     function showAnswers() {
         var x = document.getElementById("hidden-answer");
