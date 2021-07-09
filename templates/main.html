@@ -115,12 +115,12 @@
                 </li>
                 {%endfor%}
             </ul>
-            <span id="options"><label for='Ac' id="Acl">A</label><input type='checkbox' id='Ac' value='A' name='A' onclick=checkBoxes() />
-            <label for='Bc' id="Bcl">B</label><input type='checkbox' id='Bc' value='B' name='B' onclick=checkBoxes() />
-            <label for='Cc' id="Ccl">C</label><input type='checkbox' id='Cc' value='C' name='C' onclick=checkBoxes() />
-            <label for='Dc' id="Dcl">D</label><input type='checkbox' id='Dc' value='D' name='D' onclick=checkBoxes() />
-            <label for='Ec' id="Ecl">E</label><input type='checkbox' id='Ec' value='E' name='E' onclick=checkBoxes() />
-            <label for='Fc' id="Fcl">F</label><input type='checkbox' id='Fc' value='F' name='F' onclick=checkBoxes() />
+            <span id="options"><span id='box'><label for='Ac' id="Acl">A</label><input type='checkbox' id='Ac' value='A' name='A' onclick=checkBoxes() /></span>
+            <span id='box' ><label for='Bc' id="Bcl">B</label><input type='checkbox' id='Bc' value='B' name='B' onclick=checkBoxes() /></span>
+            <span id='box'><label for='Cc' id="Ccl">C</label><input type='checkbox' id='Cc' value='C' name='C' onclick=checkBoxes() /></span>
+            <span id='box'><label for='Dc' id="Dcl">D</label><input type='checkbox' id='Dc' value='D' name='D' onclick=checkBoxes() /></span>
+            <span id='box'><label for='Ec' id="Ecl">E</label><input type='checkbox' id='Ec' value='E' name='E' onclick=checkBoxes() /></span>
+            <span id='box'><label for='Fc' id="Fcl">F</label><input type='checkbox' id='Fc' value='F' name='F' onclick=checkBoxes() /></span>
             </span><span id='buttons'><input type="submit" name="btn" value="Back" /><input type="button" onclick="checkAnswers()" value="Check" /><input type="button" onclick="showAnswers()" value="Cheat" /><input type="submit" name="btn" value="Goto" /><br><input type="submit" name="btn" value="Next" />
                 </span><span id='qnum'><label for="qn">Question #:</label><input type='text' id="qn" name='qn' value='{{ p }}'/><input type="button" onclick="randQuest()" value="Random" /></span>
             <span id="foot">
