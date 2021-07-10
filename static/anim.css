@@ -1,0 +1,13 @@
+.animlogo {
+    animation-duration: 10s;
+    animation-name: intro;
+}
+@keyframes intro {
+    from {
+        transform:scale(1000%)translateY(75%);
+        margin-top: 2%;
+    }
+    to {
+        
+    }
+}
