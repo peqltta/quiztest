@@ -1,6 +1,11 @@
 .animlogo {
     animation-duration: 3s;
     animation-name: intro;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;  
+    -ms-user-select: none;
 }
 @keyframes intro {
     from {

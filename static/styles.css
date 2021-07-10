@@ -26,6 +26,7 @@
                                            
                                            a {
                                                color: #EEE;
+                                               z-index: 3;
                                            }
                                            
                                            ul {
@@ -179,7 +180,7 @@
                                                 cursor: pointer;
                                                 display: inline-block;
                                                 width: 40px;
-                                                height: 40px;
+                                                height: 42px;
                                                 margin: 1%;
                                                 transform: translateX(10px);
                                                 background-image:url('/static/circle.png');
@@ -193,8 +194,6 @@
                                                 -webkit-user-select: none;
                                                 -moz-user-select: none;  
                                                 -ms-user-select: none;
-                                                
-                                                
                                             }
                                             #options label:hover{
                                                 color:#999;
@@ -221,13 +220,6 @@
                                             h3{
                                                 font-size: 0.7rem;
                                             }
-                                            input[type=button] {
-                                                font-size: 0.6rem;
-                                            
-                                          }
-                                          input[type=submit]{
-                                              font-size: 0.6rem;
-                                          }
                                           label {
                                               font-size: 0.6rem;
                                           }
