@@ -11,45 +11,7 @@
     <title>Cloud Quiz</title>
 </head>
 <script type="text/javascript">
-    function checkAnswers() {
-        let ans = ' ';
-        if (document.getElementById("Ac").checked == true) {
-            ans += 'A';
-        }
-        if (document.getElementById("Bc").checked == true) {
-            ans += 'B';
-        }
-        if (document.getElementById("Cc").checked == true) {
-            ans += 'C';
-        }
-        if (document.getElementById("Dc").checked == true) {
-            ans += 'D';
-        }
-        if (document.getElementById("Ec").checked == true) {
-            ans += 'E';
-        }
-        ans = ans.trim();
-        let cans = '{{ c }}';
-        if (ans == cans){
-            document.getElementById('output').innerHTML = 'Correct!'
-            document.getElementById('output').style;
-        } else {
-            document.getElementById('output').innerHTML = 'Incorrect!';
-        }
-        setTimeout(() => { document.getElementById('output').innerHTML = ' '; }, 2000);
-    }
-    function showAnswers() {
-        var x = document.getElementById("hidden-answer");
-        if (x.style.display == "none") {
-            x.style.display = "block";
-        } else {
-            x.style.display = "none";
-        }
-    }
-    function randQuest() {
-        document.getElementById('qn').value = Math.floor(Math.random() * 670) + 1;
-    } 
-    function checkBoxes() {
+        function checkBoxes() {
         let cans = '{{ c }}';
         if (document.getElementById('Ac').checked)
         {
@@ -135,6 +97,17 @@
             
         }
     }
+        function showAnswers() {
+        var x = document.getElementById("hidden-answer");
+        if (x.style.display == "none") {
+            x.style.display = "block";
+        } else {
+            x.style.display = "none";
+        }
+    }
+    function randQuest() {
+        document.getElementById('qn').value = Math.floor(Math.random() * 670) + 1;
+    } 
 </script>
 <header>
     <h1>Cloud Practitioner Quiz</h1>
