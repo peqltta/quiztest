@@ -170,6 +170,7 @@
                                                 position: fixed;
                                                 width: 40px;
                                                 height: 40px;
+                                                margin: 1%;
                                                 transform: translateX(10px);
                                                 background-image:url('/static/circle.png');
                                                 background-size: 100% auto;
