@@ -16,14 +16,6 @@
                                                display: flex;
                                                flex-direction: column;
                                                flex-wrap: wrap;
-                                               padding-right: 5%;
-                                           }
-                                           
-                                           header {
-                                               display: flex;
-                                               top: 0;
-                                               width: 100%;
-                                               justify-content: center;
                                            }
                                            
                                            .qblock {
@@ -42,6 +34,7 @@
                                            h1 {
                                                color: #0c0;
                                                margin: 1%;
+                                               text-align: center;
                                            }
                                            
                                            h2 {
@@ -58,9 +51,7 @@
                                            p {
                                                color: #CCC;
                                            }
-                                           
 
-                                           
                                            #buttons {
                                                display: flex;
                                                padding-top: 5px;
@@ -69,7 +60,8 @@
                                                justify-content: center;
                                            }
                                            
-                                           form {}
+                                           form {
+                                           }
                                            
                                            label {}
                                            
@@ -149,7 +141,6 @@
                                                   width: 100%;
                                                   justify-content: center;
                                                   margin-top: 2%;
-                                                  padding-right: 5%;
                                               }
                                               #foot1 {
                                                 display: flex;
