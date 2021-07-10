@@ -50,55 +50,90 @@
         document.getElementById('qn').value = Math.floor(Math.random() * 670) + 1;
     } 
     function checkBoxes() {
+        let cans = '{{ c }}';
         if (document.getElementById('Ac').checked)
         {
+            if (cans.includes("A")){
             document.getElementById('Acl').innerHTML = '✔'
-            document.getElementById('Acl').style.color = 'red';
+            document.getElementById('Acl').style.color = 'green';
+            } else {
+                document.getElementById('Acl').innerHTML = '✖'
+                document.getElementById('Acl').style.color = 'red';
+            }
         } else {
             document.getElementById('Acl').innerHTML = 'A'
             document.getElementById('Acl').style.color = 'white';
             
-        }
+        }        
         if (document.getElementById('Bc').checked)
         {
-            document.getElementById('Bcl').innerHTML = 'X'
-            document.getElementById('Bcl').style.color = 'red';
+            if (cans.includes("B")){
+            document.getElementById('Bcl').innerHTML = '✔'
+            document.getElementById('Bcl').style.color = 'green';
+            } else {
+                document.getElementById('Bcl').innerHTML = '✖'
+                document.getElementById('Bcl').style.color = 'red';
+            }
         } else {
             document.getElementById('Bcl').innerHTML = 'B'
             document.getElementById('Bcl').style.color = 'white';
+            
         }
         if (document.getElementById('Cc').checked)
         {
-            document.getElementById('Ccl').innerHTML = 'X'
-            document.getElementById('Ccl').style.color = 'red';
+            if (cans.includes("C")){
+            document.getElementById('Ccl').innerHTML = '✔'
+            document.getElementById('Ccl').style.color = 'green';
+            } else {
+                document.getElementById('Ccl').innerHTML = '✖'
+                document.getElementById('Ccl').style.color = 'red';
+            }
         } else {
             document.getElementById('Ccl').innerHTML = 'C'
             document.getElementById('Ccl').style.color = 'white';
+            
         }
         if (document.getElementById('Dc').checked)
-        
         {
-            document.getElementById('Dcl').innerHTML = 'X'
-            document.getElementById('Dcl').style.color = 'red';
+            if (cans.includes("D")){
+            document.getElementById('Dcl').innerHTML = '✔'
+            document.getElementById('Dcl').style.color = 'green';
+            } else {
+                document.getElementById('Dcl').innerHTML = '✖'
+                document.getElementById('Dcl').style.color = 'red';
+            }
         } else {
             document.getElementById('Dcl').innerHTML = 'D'
             document.getElementById('Dcl').style.color = 'white';
+            
         }
         if (document.getElementById('Ec').checked)
         {
-            document.getElementById('Ecl').innerHTML = 'X'
-            document.getElementById('Ecl').style.color = 'red';
+            if (cans.includes("E")){
+            document.getElementById('Ecl').innerHTML = '✔'
+            document.getElementById('Ecl').style.color = 'green';
+            } else {
+                document.getElementById('Ecl').innerHTML = '✖'
+                document.getElementById('Ecl').style.color = 'red';
+            }
         } else {
             document.getElementById('Ecl').innerHTML = 'E'
             document.getElementById('Ecl').style.color = 'white';
+            
         }
         if (document.getElementById('Fc').checked)
         {
-            document.getElementById('Fcl').innerHTML = 'X'
-            document.getElementById('Fcl').style.color = 'red';
+            if (cans.includes("F")){
+            document.getElementById('Fcl').innerHTML = '✔'
+            document.getElementById('Fcl').style.color = 'green';
+            } else {
+                document.getElementById('Fcl').innerHTML = '✖'
+                document.getElementById('Fcl').style.color = 'red';
+            }
         } else {
             document.getElementById('Fcl').innerHTML = 'F'
             document.getElementById('Fcl').style.color = 'white';
+            
         }
     }
 </script>
@@ -122,7 +157,7 @@
             <span id='box'><label for='Dc' id="Dcl">D</label><input type='checkbox' id='Dc' value='D' name='D' onclick=checkBoxes() /></span>
             <span id='box'><label for='Ec' id="Ecl">E</label><input type='checkbox' id='Ec' value='E' name='E' onclick=checkBoxes() /></span>
             <span id='box'><label for='Fc' id="Fcl">F</label><input type='checkbox' id='Fc' value='F' name='F' onclick=checkBoxes() /></span>
-            </span><span id='buttons'><input type="submit" name="btn" value="Back" /><input type="button" onclick="checkAnswers()" value="Check" /><input type="button" onclick="showAnswers()" value="Cheat" /><input type="submit" name="btn" value="Goto" /><br><input type="submit" name="btn" value="Next" />
+            </span><span id='buttons'><input type="submit" name="btn" value="Back" /><input type="button" onclick="showAnswers()" value="Link" /><input type="submit" name="btn" value="Goto" /><br><input type="submit" name="btn" value="Next" />
                 </span><span id='qnum'><label for="qn">Question #:</label><input type='text' id="qn" name='qn' value='{{ p }}'/><input type="button" onclick="randQuest()" value="Random" /></span>
             <span id="foot">
                 <h3 id="output"></h3></span><span id="foot1">
