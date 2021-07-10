@@ -1,10 +1,12 @@
                                            * {
                                                margin: 0;
                                                padding: 0;
+                                               -webkit-font-smoothing: antialiased;
                                            }
                                            
                                             :root {
                                                font-family: 'Oxygen', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+                                               font-size: 1.6rem;
                                                color: #222;
                                                background-color: #222;
                                                margin: 0;
@@ -35,16 +37,19 @@
                                                color: #0c0;
                                                margin: 1%;
                                                text-align: center;
+                                               text-shadow: 1px 0px #006100;
                                            }
                                            
                                            h2 {
                                                color: #8f8;
                                                margin: 2%;
                                                width: 95%;
+                                               font-size: 1.1rem;
                                            }
                                            
                                            h3 {
                                                color: #ccc;
+                                               font-size: 0.9rem;
                                            }
                                            
                                            label,
@@ -63,7 +68,10 @@
                                            form {
                                            }
                                            
-                                           label {}
+                                           label {
+                                               font-size: 0.6rem;
+                                               user-select: none;
+                                           }
                                            
                                            li {
                                                color: #eee;
@@ -86,6 +94,8 @@
                                                text-transform: uppercase;
                                                border-radius: 4px;
                                                transition: .6s;
+                                               font-size: 0.7rem;
+                                               box-shadow: inset 0 0 5px #000;
                                            }
                                            
                                            input[type=submit]:hover {
@@ -110,6 +120,9 @@
                                                text-transform: uppercase;
                                                border-radius: 4px;
                                                transition: .6s;
+                                               font-size: 0.7rem;
+                                               box-shadow: inset 0 0 5px #000;
+                                               
                                            }
                                            
                                            #homelinks {
@@ -132,6 +145,7 @@
                                                 font-weight:bold;
                                                 width: 15%;
                                                 text-align: center;
+                                                font-size: 0.6rem;
                                               }
                                               #qnum label{
                                                   padding-top: 5px;
