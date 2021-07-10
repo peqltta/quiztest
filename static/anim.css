@@ -1,5 +1,5 @@
 .animlogo {
-    animation-duration: 10s;
+    animation-duration: 3s;
     animation-name: intro;
 }
 @keyframes intro {
