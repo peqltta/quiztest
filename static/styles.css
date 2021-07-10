@@ -69,11 +69,7 @@
                                            }
                                            
                                            label {
-                                               font-size: 0.6rem;
-                                               user-select: none;
-                                               -webkit-user-select: none;  /* Chrome all / Safari all */
-                                               -moz-user-select: none;     /* Firefox all */
-                                               -ms-user-select: none;  
+                                               font-size: 0.6rem; 
                                            }
                                            
                                            li {
@@ -192,7 +188,12 @@
                                                 text-align: center;
                                                 padding-top: 10px;
                                                 padding-bottom: 10px;
-                                                cursor: pointer;
+                                                -webkit-tap-highlight-color: rgba(0,0,0,0);
+                                                user-select: none;
+                                                -webkit-user-select: none;
+                                                -moz-user-select: none;  
+                                                -ms-user-select: none;
+                                                
                                                 
                                             }
                                             #options label:hover{
