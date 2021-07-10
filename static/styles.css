@@ -142,7 +142,7 @@
                                                 justify-content: center;
                                                 margin-top: 2%;
                                               }
-                                              input[type=text]{
+                                              input[type=number]{
                                                 margin-left: 1%;
                                                 height: 30px;
                                                 font-weight:bold;
