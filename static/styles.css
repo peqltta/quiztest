@@ -164,6 +164,12 @@
                                                 justify-content: center;
                                                 margin-bottom: 6%;
                                             }
+                                            #divider {
+                                                width: 100%;
+                                                height: 5px;
+                                                position: relative;
+                                                display: inline-block;
+                                            }
                                             #options label{
                                                 transition: .6s;
                                                 cursor: pointer;
