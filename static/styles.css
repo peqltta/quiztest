@@ -2,6 +2,7 @@
                                                margin: 0;
                                                padding: 0;
                                                --image-link:url("/static/circle.png");
+                                               --image-link2:url("/static/circlehov.png");
                                            }
                                            
                                             :root {
@@ -63,12 +64,7 @@
                                                color: #CCC;
                                            }
                                            
-                                           #options {
-                                               display: flex;
-                                               padding-top: 2%;
-                                               width: 100%;
-                                               justify-content: center;
-                                           }
+
                                            
                                            #buttons {
                                                display: flex;
@@ -102,7 +98,7 @@
                                                cursor: pointer;
                                                text-transform: uppercase;
                                                border-radius: 4px;
-                                               transition: .3s;
+                                               transition: .6s;
                                            }
                                            
                                            input[type=submit]:hover {
@@ -126,7 +122,7 @@
                                                cursor: pointer;
                                                text-transform: uppercase;
                                                border-radius: 4px;
-                                               transition: .3s;
+                                               transition: .6s;
                                            }
                                            
                                            #homelinks {
@@ -166,26 +162,32 @@
                                                 justify-content: center;
                                                 margin-top: 2%;
                                             }
+                                            #options {
+                                                display: flex;
+                                                padding-top: 2%;
+                                                width: 100%;
+                                                justify-content: center;
+                                                margin-bottom: 5%;
+                                            }
                                             #options label{
-                                                transition: .3s;
+                                                transition: .6s;
                                                 cursor: pointer;
                                                 position: fixed;
+                                                width: 40px;
+                                                height: 40px;
                                                 transform: translateX(10px);
-
-                                            }
-                                            #options label:hover{
-                                                color:#999;
-                                            }
-                                            #options label::after{
-                                                padding: 20px;
-                                                content: ' ';
-                                                position: fixed;
-                                                transform: translateX(-24px) translateY(-10px);
                                                 background-image:var(--image-link);
                                                 background-size: 100% auto;
                                                 background-repeat: no-repeat;
+                                                text-align: center;
+                                                padding-top: 10px;
+                                                padding-bottom: 10px;
+                                                cursor: pointer;
                                                 
-                                                
+                                            }
+                                            #options label:hover{
+                                                color:#999;
+                                                background-image:var(--image-link2);
                                             }
                                             #box{
                                                 width: 50px;
