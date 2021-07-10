@@ -1,8 +1,6 @@
                                            * {
                                                margin: 0;
                                                padding: 0;
-                                               --image-link:url("/static/circle.png");
-                                               --image-link2:url("/static/circlehov.png");
                                            }
                                            
                                             :root {
@@ -12,10 +10,7 @@
                                                margin: 0;
                                                left: 0;                                               
                                            }
-                                           #jshackvar {
-                                            --image-link:url("/static/circle.png");
-                                           }
-                                           
+                                          
                                            body {
                                                color: #222;
                                                display: flex;
@@ -176,7 +171,7 @@
                                                 width: 40px;
                                                 height: 40px;
                                                 transform: translateX(10px);
-                                                background-image:var(--image-link);
+                                                background-image:url('/static/circle.png');
                                                 background-size: 100% auto;
                                                 background-repeat: no-repeat;
                                                 text-align: center;
@@ -187,7 +182,7 @@
                                             }
                                             #options label:hover{
                                                 color:#999;
-                                                background-image:var(--image-link2);
+                                                background-image:url('/static/circlehov.png');
                                             }
                                             #box{
                                                 width: 50px;
