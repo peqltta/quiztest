@@ -3,25 +3,7 @@
                                                padding: 0;
                                                -webkit-font-smoothing: antialiased;
                                            }
-                                           @media only screen and (max-width: 700px) {
-                                            h1 {
-                                              font-size: 0.5rem;
-                                            }
-                                            h2 {
-                                                font-size: 0.8rem;
-                                            }
-                                            h3 {
-                                                font-size: 0.6rem;
-                                            }
-                                            input[type=button] {
-                                                font-size: 0.4rem;
-                                            
-                                          }
-                                          input[type=submit]{
-                                              font-size: 0.4rem;
-                                          }
-                                        }
-                                           
+                                                                                     
                                             :root {
                                                font-family: 'Oxygen', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
                                                font-size: 1.4rem;
@@ -225,3 +207,24 @@
                                             height: 0;
                                             visibility: hidden;
                                         }
+                                        @media screen and (max-width: 700px) {
+                                            h1 {
+                                                font-size: 0.6rem;
+                                            }
+                                            h2 {
+                                                font-size: 0.8rem;
+                                            }
+                                            h3{
+                                                font-size: 0.7rem;
+                                            }
+                                            input[type=button] {
+                                                font-size: 0.6rem;
+                                            
+                                          }
+                                          input[type=submit]{
+                                              font-size: 0.6rem;
+                                          }
+                                          label {
+                                              font-size: 0.6rem;
+                                          }
+                                           }
