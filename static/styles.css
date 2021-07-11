@@ -51,6 +51,8 @@
                                            h3 {
                                                color: #ccc;
                                                font-size: 0.9rem;
+                                               margin: 1%;
+                                               padding: 1%;
                                            }
                                            
                                            label,
@@ -73,8 +75,6 @@
                                            
                                            li {
                                                color: #eee;
-                                               margin: 1%;
-                                               padding: 1%;
                                                list-style: none;
                                            }
                                            
