@@ -138,7 +138,7 @@
                                                 display: flex;
                                                 width: 100%;
                                                 justify-content: center;
-                                                margin-top: 2%;
+                                                font-size: 0.6rem;
                                               }
                                               input[type=number]{
                                                 margin-left: 1%;
