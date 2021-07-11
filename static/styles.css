@@ -83,10 +83,9 @@
                                                font-weight: bold;
                                                font-size: 0.85rem;
                                                padding: 0.1em;
-                                               min-width: 75px;
                                                width: 10%;
                                                background-color: #8f8;
-                                               min-width: 85px;
+                                               min-width: 75px;
                                                width: 10%;
                                                height: 30px;
                                                border: none;
@@ -113,7 +112,7 @@
                                                font-weight: bold;
                                                font-size: 0.85rem;
                                                background-color: #8f8;
-                                               min-width: 85px;
+                                               min-width: 75px;
                                                width: 10%;
                                                height: 30px;
                                                border: none;
