@@ -78,8 +78,10 @@
                                            }
                                            
                                            input[type=submit] {
+                                               color: #222;
                                                padding: 0.1em;
                                                margin-left: 0.5rem;
+                                               font-family: 'Ramabhadra', sans-serif;
                                                font-weight: bold;
                                                font-size: 0.85rem;
                                                padding: 0.1em;
@@ -107,8 +109,10 @@
                                            }
                                            
                                            input[type=button] {
+                                               color: #222;
                                                margin-left: 0.5rem;
                                                padding: 0.1em;
+                                               font-family: 'Ramabhadra', sans-serif;
                                                font-weight: bold;
                                                font-size: 0.85rem;
                                                background-color: #8f8;
@@ -136,6 +140,7 @@
                                            }
                                            #qnum {
                                                 display: flex;
+                                                font-family: 'Ramabhadra', sans-serif;
                                                 width: 100%;
                                                 justify-content: center;
                                               }
@@ -148,6 +153,7 @@
                                                 font-size: 0.6rem;
                                               }
                                               #qnum label{
+                                                font-family: 'Ramabhadra', sans-serif;
                                                   padding-top: 5px;
                                               }
                                               #foot {
