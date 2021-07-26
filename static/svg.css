@@ -12,8 +12,6 @@ body{
 h1 {
     font-family: verdana;
     color: #ccc;
-    margin-top: 45%;
-    margin-left: 45%;
     text-shadow: 2px 2px 2px #000,-2px 2px 2px #000,2px -2px 2px #000,-2px -2px 2px #000;
 }
 
