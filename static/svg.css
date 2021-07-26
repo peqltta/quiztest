@@ -20,7 +20,7 @@ body{
     transition: background-color 0.5s ease;
 }
 .headcontainer{
-    animation: slidein 10s ease-in-out infinite;
+    animation: slidein 30s ease-in-out infinite;
     width: 500%;
     background-color: var(--bgcolour);
     text-align: center;
@@ -127,10 +127,10 @@ h1 {
 
 @keyframes slidein {
     0%{
-        transform: translateX(2000px);
+        transform: translateX(2400px);
     }
     100%{
-        transform: translateX(-2000px);
+        transform: translateX(-2400px);
     }
     
 }
