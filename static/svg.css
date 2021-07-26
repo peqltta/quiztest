@@ -12,7 +12,7 @@
 }
 body{
     background-color: var(--bgcolour);
-    animation: bganimate 100s linear infinite;
+    animation: bganimate 60s linear infinite;
     background-size: cover;
     display: flex;
     justify-content: center;
