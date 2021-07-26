@@ -127,10 +127,10 @@ h1 {
 
 @keyframes slidein {
     0%{
-        transform: translateX(2400px);
+        transform: translateX(1800px);
     }
     100%{
-        transform: translateX(-2400px);
+        transform: translateX(-1800px);
     }
     
 }
