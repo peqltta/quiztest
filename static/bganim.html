@@ -6,9 +6,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SVG FUN</title>
     <link rel="stylesheet" href="svg.css">
+    <script>
+        let root = document.documentElement;
+        function greenbg() {
+            root.style.setProperty('--bgcolour', 'green');
+        }
+        function redbg() {
+            root.style.setProperty('--bgcolour', 'red');
+        }
+        function bluebg() {
+            root.style.setProperty('--bgcolour', 'blue');
+        }
+        function purplebg() {
+            root.style.setProperty('--bgcolour', 'hsl(247.1, 73%, 50%)');
+        }
+        function yellowbg() {
+            root.style.setProperty('--bgcolour', 'yellow');
+        }
+    </script>
 </head>
 <body>
-    <span class="spacer"></span>
-    <h1>pathdAnim</h1>
+    <span class="headcontainer">
+        <h1>Too Many Animations</h1>
+    </span>
+    <span class="colourbtns">
+        <div onclick="greenbg()" class="greenbtn"></div>
+        <div onclick="bluebg()" class="bluebtn"></div>
+        <div onclick="purplebg()" class="purplebtn"></div>
+        <div onclick="redbg()" class="redbtn"></div>
+        <div onclick="yellowbg()" class="yellowbtn"></div>
+    </span>
 </body>
 </html>
