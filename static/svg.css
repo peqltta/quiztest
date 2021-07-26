@@ -5,6 +5,10 @@
 :root {
     font-size: 12px;
     --bgcolour: hsl(247.1, 73%, 50%);
+    --red: hsl(357.1, 73%, 50%);
+    --yellow: hsl(57.1, 73%, 50%);
+    --green: hsl(137.1, 73%, 50%);
+    --blue: hsl(207.1, 73%, 50%);
 }
 body{
     background-color: var(--bgcolour);
@@ -48,7 +52,7 @@ h1 {
     position: relative;
     border-radius: 50%;
     border: 2px solid #222;
-    background-color: green;
+    background-color: var(--green);
     cursor: pointer;
 }
 .greenbtn:hover {
@@ -80,7 +84,7 @@ h1 {
     position: relative;
     border-radius: 50%;
     border: 2px solid #222;
-    background-color: blue;
+    background-color: var(--blue);
     cursor: pointer;
 }
 .purplebtn {
@@ -104,7 +108,7 @@ h1 {
     position: relative;
     border-radius: 50%;
     border: 2px solid #222;
-    background-color: red;
+    background-color: var(--red);
     cursor: pointer;
 }
 .yellowbtn {
@@ -116,7 +120,7 @@ h1 {
     position: relative;
     border-radius: 50%;
     border: 2px solid #222;
-    background-color: yellow;
+    background-color: var(--yellow);
     cursor: pointer;
 }
 
