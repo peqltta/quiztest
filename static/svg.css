@@ -20,7 +20,7 @@ body{
     transition: background-color 0.5s ease;
 }
 .headcontainer{
-    animation: slidein 30s cubic-bezier(0.39, 0.575, 0.565, 1) infinite;
+    animation: slidein 20s cubic-bezier(0.39, 0.575, 0.565, 1) infinite;
     width: 500%;
     background-color: var(--bgcolour);
     text-align: center;
