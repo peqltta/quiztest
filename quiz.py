@@ -5,8 +5,9 @@ application = Flask(__name__)
 with open('QADict.json') as f:
     QADict = json.load(f)
     f.close()
-@application.route('/fpstest'
-    return render_template('fptest.html'))
+@application.route('/fpstest')
+def fptest():
+    return render_template('fptest.html')
 @application.route('/')
 def main():
     return render_template('index.html')
