@@ -82,7 +82,7 @@ var Module = {
 // ================================================================================
 // *** HTML5 UE4 ***
 
-Module.arguments = ['../../../FPSTEST/FPSTEST.uproject','-stdout',];
+Module.arguments = ['../../../fpstest/fpstest.uproject','-stdout',];
 
 // UE4 Editor or UE4 Frontend with assets "cook on the fly"?
 if (location.host != "" && (location.search.indexOf('cookonthefly') != -1)) {
@@ -1154,22 +1154,22 @@ $(document).ready(function() {
 
 		// ----------------------------------------
 		// MORE JS
-		var dataJsDownload = fetchOrDownloadAndStore(db, Module.locateFile('/fpstest/FPSTEST.data.js'));
+		var dataJsDownload = fetchOrDownloadAndStore(db, Module.locateFile('/fpstest/fpstest.data.js'));
 		var utilityJsDownload = fetchOrDownloadAndStore(db, Module.locateFile('/fpstest/Utility.js')).then(addScriptToDom);
 		var dataDownload =
 /* // The following code would download and store the .data file as a Blob, which should be more efficient than loading an ArrayBuffer. However that seems to be buggy, so avoid it for now.
-			fetchOrDownloadAndStore(db, Module.locateFile('FPSTEST.data')).then(function(dataBlob) {
+			fetchOrDownloadAndStore(db, Module.locateFile('fpstest.data')).then(function(dataBlob) {
 				return readBlobToArrayBuffer(dataBlob).then(function(dataArrayBuffer) {
 					Module['preloadedPackages'] = {};
-					Module['preloadedPackages'][Module.locateFile('FPSTEST.data')] = dataArrayBuffer;
+					Module['preloadedPackages'][Module.locateFile('fpstest.data')] = dataArrayBuffer;
 					return dataJsDownload.then(addScriptToDom);
 				})
 			});
 */
 // Instead as a fallback, download as ArrayBuffer. (TODO: Figure out the bugs with the above, and switch to using that one instead)
-			fetchOrDownloadAndStore(db, Module.locateFile('/fpstest/FPSTEST.data'), 'arraybuffer').then(function(dataArrayBuffer) {
+			fetchOrDownloadAndStore(db, Module.locateFile('/fpstest/fpstest.data'), 'arraybuffer').then(function(dataArrayBuffer) {
 				Module['preloadedPackages'] = {};
-				Module['preloadedPackages'][Module.locateFile('/fpstest/FPSTEST.data')] = dataArrayBuffer;
+				Module['preloadedPackages'][Module.locateFile('/fpstest/fpstest.data')] = dataArrayBuffer;
 				return dataJsDownload.then(addScriptToDom);
 			});
 

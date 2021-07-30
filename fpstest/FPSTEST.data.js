@@ -18,8 +18,8 @@ Module.expectedDataFileDownloads++;
     } else {
       throw 'using preloaded data can only be done on a web page or in a web worker';
     }
-    var PACKAGE_NAME = 'FPSTEST.data';
-    var REMOTE_PACKAGE_BASE = 'FPSTEST.data';
+    var PACKAGE_NAME = 'fpstest.data';
+    var REMOTE_PACKAGE_BASE = 'fpstest.data';
     if (typeof Module['locateFilePackage'] === 'function' && !Module['locateFile']) {
       Module['locateFile'] = Module['locateFilePackage'];
       err('warning: you defined Module.locateFilePackage, that has been renamed to Module.locateFile (using your locateFilePackage for now)');
@@ -98,7 +98,7 @@ Module.expectedDataFileDownloads++;
     function assert(check, msg) {
       if (!check) throw msg + new Error().stack;
     }
-Module['FS_createPath']('/fpstest', 'FPSTEST', true, true);
+Module['FS_createPath']('/fpstest', 'fpstest', true, true);
 Module['FS_createPath']('/fpstest/fpstest', 'Content', true, true);
 Module['FS_createPath']('/fpstest/fpstest/Content', 'Paks', true, true);
 
