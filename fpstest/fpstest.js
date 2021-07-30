@@ -51,7 +51,7 @@ const serveCompressedAssets = false;
 // For the large .data file, there's two ways to manage compression: either UE4 UnrealPak tool can compress it in engine, or
 // it can be gzip compressed on disk like other assets. Compressing via UnrealPak has the advantage of storing a smaller data
 // file to IndexedDB, whereas gzip compressing to disk has the advantage of starting up the page slightly faster.
-// If true, serve out 'UE4Game.data.gz', if false, serve out 'UE4Game.data'.
+// If true, serve out 'ue4game.data.gz', if false, serve out 'ue4game.data'.
 //const dataFileIsGzipCompressed = false;
 
 console.log("Emscripten version: 1.38.31");
@@ -1133,7 +1133,7 @@ $(document).ready(function() {
 				return { db: db, wasmBytes: wasmBytes, fromIndexedDB: true };
 			});
 		}).catch(function() {
-			return download(Module.locateFile('/fpstest/UE4Game.wasm'), 'arraybuffer').then(function(wasmBytes) {
+			return download(Module.locateFile('/fpstest/ue4game.wasm'), 'arraybuffer').then(function(wasmBytes) {
 				return { db: db, wasmBytes: wasmBytes, fromIndexedDB: false };
 			});
 		});
@@ -1145,7 +1145,7 @@ $(document).ready(function() {
 
 		// ----------------------------------------
 		// MAIN JS
-		var mainJsDownload = fetchOrDownloadAndStore(db, Module.locateFile('/fpstest/UE4Game.js'), 'blob').then(function(data) {
+		var mainJsDownload = fetchOrDownloadAndStore(db, Module.locateFile('/fpstest/ue4game.js'), 'blob').then(function(data) {
 				Module['mainScriptUrlOrBlob'] = data;
 				return addScriptToDom(data).then(function() {
 					addRunDependency('wait-for-compiled-code');
