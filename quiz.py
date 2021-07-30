@@ -1,13 +1,16 @@
 from flask import Flask, render_template, request
+from flask import send_from_directory
+from flask import jsonify
 import random, copy
 import json
 application = Flask(__name__)
 with open('QADict.json') as f:
     QADict = json.load(f)
     f.close()
-@application.route('/fpstest')
-def fptest():
-    return render_template('fpstest.html')
+@application.route('/fpstest/<path:path>')
+def fpstest(path):
+    return application.send_static_file(path)
+
 @application.route('/')
 def main():
     return render_template('index.html')
