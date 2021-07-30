@@ -9,7 +9,7 @@ with open('QADict.json') as f:
     f.close()
 @application.route('/fpstest/<path:path>')
 def fpstest(path):
-    return application.send_static_file(path)
+    return send_from_directory("fpstest", path)
 
 @application.route('/')
 def main():

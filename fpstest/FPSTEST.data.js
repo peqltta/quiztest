@@ -98,9 +98,9 @@ Module.expectedDataFileDownloads++;
     function assert(check, msg) {
       if (!check) throw msg + new Error().stack;
     }
-Module['FS_createPath']('/', 'FPSTEST', true, true);
-Module['FS_createPath']('/FPSTEST', 'Content', true, true);
-Module['FS_createPath']('/FPSTEST/Content', 'Paks', true, true);
+Module['FS_createPath']('/fpstest', 'FPSTEST', true, true);
+Module['FS_createPath']('/fpstest/fpstest', 'Content', true, true);
+Module['FS_createPath']('/fpstest/fpstest/Content', 'Paks', true, true);
 
     function DataRequest(start, end, audio) {
       this.start = start;
@@ -173,6 +173,6 @@ Module['FS_createPath']('/FPSTEST/Content', 'Paks', true, true);
   }
 
  }
- loadPackage({"files": [{"start": 0, "audio": 0, "end": 53, "filename": "/Manifest_NonUFSFiles_HTML5.txt"}, {"start": 53, "audio": 0, "end": 87, "filename": "/UE4CommandLine.txt"}, {"start": 87, "audio": 0, "end": 141479428, "filename": "/FPSTEST/Content/Paks/FPSTEST-HTML5.pak"}], "remote_package_size": 141479428, "package_uuid": "aa42187c-b07a-43f9-9b0c-36e598d421bb"});
+ loadPackage({"files": [{"start": 0, "audio": 0, "end": 53, "filename": "/Manifest_NonUFSFiles_HTML5.txt"}, {"start": 53, "audio": 0, "end": 87, "filename": "/UE4CommandLine.txt"}, {"start": 87, "audio": 0, "end": 141479428, "filename": "/fpstest/fpstest/Content/Paks/fpstest/fpstest-HTML5.pak"}], "remote_package_size": 141479428, "package_uuid": "aa42187c-b07a-43f9-9b0c-36e598d421bb"});
 
 })();
