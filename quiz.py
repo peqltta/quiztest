@@ -7,7 +7,7 @@ with open('QADict.json') as f:
     f.close()
 @application.route('/fpstest')
 def fptest():
-    return render_template('fptest.html')
+    return render_template('fpstest.html')
 @application.route('/')
 def main():
     return render_template('index.html')
